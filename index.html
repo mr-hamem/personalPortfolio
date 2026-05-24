@@ -3,270 +3,757 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MR HAMEM — Developer & Software Engineer</title>
+  <meta name="description" content="Ibrahim Memon — Frontend Developer & UI/UX Designer. Building premium digital experiences." />
+  <meta name="keywords" content="frontend developer, UI/UX designer, portfolio, web developer" />
+  <title>MR HAMEM — Frontend Developer</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="responsive.css" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
-  <!-- NAVIGATION -->
-<header>
-    <nav id="navbar">
-    <div class="nav-logo">MH</div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#work">Lab</a></li>
-      <li><a href="register.php">Login</a></li>
-    </ul>
-    <div class="nav-hamburger" id="hamburger">
-      <span></span><span></span><span></span>
+
+  <!-- ===================== LOADING SCREEN ===================== -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">MH</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <span class="loader-pct">0%</span>
+    </div>
+  </div>
+
+  <!-- ===================== CURSOR ===================== -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- ===================== MOUSE GLOW ===================== -->
+  <div id="mouse-glow"></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container-xl">
+      <a class="navbar-brand" href="#hero">MH</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+        <span class="toggler-icon"><span></span><span></span><span></span></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <a href="mailto:hamemapple2018@gmail.com" class="btn btn-hire ms-lg-4">Hire Me</a>
+      </div>
     </div>
   </nav>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html" onclick="closeMobileMenu()">Home</a>
-    <a href="#about" onclick="closeMobileMenu()">About</a>
-    <a href="#work" onclick="closeMobileMenu()">Lab</a>
-  </div>
-</header>
-  <!-- HERO -->
- <main>
-   <section id="home">
-    <div class="hero-bg-glow"></div>
-    <div class="hero-intro-row">
-      <div class="hero-avatar-wrapper">
-        <div class="hero-avatar">
-          <span class="hero-avatar-emoji"></span>
-        </div>
-      </div>
-      <div>
-        <span class="hero-tag">Hello! I Am</span>
-        <div class="hero-name-badge">MR HAMEM</div>
-        <div class="hero-tagline">
-          A Developer who<br/>
-          Judges a book<br/>
-          by its <em>cover</em>…
-          <small>Because if the cover does not impress you what else can?</small>
-        </div>
-      </div>
-    </div>
 
-    <h1 class="hero-main-title" id="about">
-      I'm a Software Engineer.<span class="cursor"></span>
-    </h1>
-    <div class="hero-subtitle-row">
-      Currently, I'm a Software Engineer at&nbsp;
-      <span class="hero-company-badge">Facebook</span>
-    </div>
-    <p class="hero-desc">
-      A self-taught UI/UX designer, functioning in the industry for 3+ years now.
-      I make meaningful and delightful digital products that create an equilibrium
-      between user needs and business goals.
-    </p>
-  </section>
+  <!-- ===================== HERO ===================== -->
+  <section id="hero" class="hero-section">
+    <!-- floating blobs -->
+    <div class="hero-blob blob-1"></div>
+    <div class="hero-blob blob-2"></div>
+    <div class="hero-blob blob-3"></div>
+    <!-- grid overlay -->
+    <div class="hero-grid"></div>
 
-  <div class="divider"></div>
+    <div class="container-xl h-100">
+      <div class="row h-100 align-items-center justify-content-center">
+        <div class="col-lg-10 col-xl-9 text-center">
 
-  <!-- WORK EXPERIENCE -->
-  <section id="work">
-    <div class="section-label">Portfolio</div>
-    <h2 class="section-title">Work Experience</h2>
-    <div class="work-grid">
-
-      <div class="work-card" data-aos="fade-up" data-aos-delay="0">
-        <div class="work-icon blue">🚀</div>
-        <div>
-          <div class="work-card-title">CIB on the Mobile</div>
-          <div class="work-card-desc">Take your client-focused dashboards to the amazing land of digital-enhanced prowess by our amazing land of digital-enhanced prowess.</div>
-          <a href="#" class="work-card-btn">Learn More →</a>
-        </div>
-      </div>
-
-      <div class="work-card" data-aos="fade-up" data-aos-delay="100">
-        <div class="work-icon pink">💬</div>
-        <div>
-          <div class="work-card-title">CIB on the Mobile</div>
-          <div class="work-card-desc">Take your client-focused dashboards to the amazing land of digital-enhanced prowess by our amazing land of digital-enhanced prowess.</div>
-          <a href="#" class="work-card-btn">Learn More →</a>
-        </div>
-      </div>
-
-      <div class="work-card" data-aos="fade-up" data-aos-delay="200">
-        <div class="work-icon purple">🎮</div>
-        <div>
-          <div class="work-card-title">CIB on the Mobile</div>
-          <div class="work-card-desc">Take your client-focused dashboards to the amazing land of digital-enhanced prowess by our amazing land of digital-enhanced prowess.</div>
-          <a href="#" class="work-card-btn">Learn More →</a>
-        </div>
-      </div>
-
-      <div class="work-card" data-aos="fade-up" data-aos-delay="300">
-        <div class="work-icon teal">🌍</div>
-        <div>
-          <div class="work-card-title">CIB on the Mobile</div>
-          <div class="work-card-desc">Take your client-focused dashboards to the amazing land of digital-enhanced prowess by our amazing land of digital-enhanced prowess.</div>
-          <a href="#" class="work-card-btn">Learn More →</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- SOLAR SYSTEM ANIMATION -->
-  <div id="solar-section">
-    <div class="solar-wrapper">
-      <!-- Orbits -->
-      <div class="orbit orbit-1"></div>
-      <div class="orbit orbit-2"></div>
-      <div class="orbit orbit-3"></div>
-      <!-- Sun -->
-      <div class="solar-sun">
-        <span class="solar-logo">ᗑ</span>
-      </div>
-      <!-- Planets -->
-      <div class="planet planet-1"></div>
-      <div class="planet planet-2"></div>
-      <div class="planet planet-3"></div>
-    </div>
-  </div>
-
-  <div class="divider"></div>
-
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="skills-heading">
-      <p class="section-label" style="text-align:center">Stack</p>
-      <h2 class="skills-section-title">
-        I'm currently looking to join a <em>cross-functional</em> team<br/>
-        that values improving people's lives through accessible design
-      </h2>
-    </div>
-
-    <div class="skill-row" data-aos="fade-up">
-      <div class="skill-chip" title="React">⚛️</div>
-      <div class="skill-chip" title="TypeScript">#️⃣</div>
-      <div class="skill-chip" title="CSS">🎨</div>
-      <div class="skill-chip" title="Node.js">🟢</div>
-      <div class="skill-chip" title="Git">🐛</div>
-      <div class="skill-chip" title="Figma">🎭</div>
-      <div class="skill-chip" title="Design">✏️</div>
-    </div>
-    <div class="skill-row" data-aos="fade-up" data-aos-delay="100">
-      <div class="skill-chip labeled" title="Adobe InDesign">In <span>InDesign</span></div>
-      <div class="skill-chip labeled" title="CSS3">CSS3</div>
-      <div class="skill-chip" title="Globe">🌐</div>
-      <div class="skill-chip" title="Illustrator">Ai</div>
-      <div class="skill-chip labeled" title="Webflow">⬡ Webflow</div>
-      <div class="skill-chip labeled" title="Zeplin">Z Zeplin</div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- FEATURED PROJECTS -->
-  <section id="projects">
-    <div class="section-label">Portfolio</div>
-    <h2 class="section-title">Featured Projects</h2>
-
-    <!-- Project 1 -->
-    <div class="project-block" data-aos="fade-up">
-      <div>
-        <div class="project-label">Featured Project</div>
-        <h3 class="project-title">Restaurant Project</h3>
-        <div class="project-desc">
-          A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.
-        </div>
-        <div class="project-links">
-          <a href="#" class="project-link" title="GitHub">⭐</a>
-          <a href="#" class="project-link" title="External Link">🔗</a>
-        </div>
-      </div>
-      <div class="project-mockup" data-aos="fade-left" data-aos-delay="150">
-        <div class="mockup-inner">
-          <div class="mockup-browser-bar">
-            <div class="mockup-dot"></div>
-            <div class="mockup-dot"></div>
-            <div class="mockup-dot"></div>
+          <div class="availability-badge" id="availBadge">
+            <span class="badge-dot"></span>
+            Available for freelance work
           </div>
-          <div class="mockup-content">
-            <div class="mockup-placeholder-img">🖼️</div>
-            <div class="mockup-placeholder-text">This headline reflects<br>my personality (16px)</div>
-            <div class="mockup-placeholder-text light">WHO AM I</div>
-            <div class="mockup-line"></div>
-            <div class="mockup-placeholder-text light">Work as headlinefit to (45px)</div>
+
+          <h1 class="hero-title" id="heroTitle">
+            <span class="line-wrap"><span class="line">Crafting</span></span>
+            <span class="line-wrap"><span class="line hero-highlight">Premium</span></span>
+            <span class="line-wrap"><span class="line">Digital Experiences</span></span>
+          </h1>
+
+          <p class="hero-sub" id="heroSub">
+            Frontend Developer &amp; UI/UX Designer based in Bangladesh —<br class="d-none d-md-block"/>
+            turning ideas into fast, beautiful, accessible interfaces.
+          </p>
+
+          <div class="hero-cta d-flex flex-wrap justify-content-center gap-3" id="heroCta">
+            <a href="#projects" class="btn btn-primary-glow magnetic-btn">
+              View My Work <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+            <a href="#contact" class="btn btn-ghost magnetic-btn">
+              Let's Talk <i class="bi bi-chat-dots ms-1"></i>
+            </a>
+          </div>
+
+          <div class="hero-stats d-flex justify-content-center gap-5 mt-5" id="heroStats">
+            <div class="stat-item">
+              <span class="stat-num" data-count="3">0</span><span class="stat-num">+</span>
+              <p class="stat-label">Years Exp.</p>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num" data-count="20">0</span><span class="stat-num">+</span>
+              <p class="stat-label">Projects</p>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num" data-count="15">0</span><span class="stat-num">+</span>
+              <p class="stat-label">Clients</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- scroll indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about" class="section-pad">
+    <div class="container-xl">
+      <div class="row align-items-center g-5">
+
+        <div class="col-lg-5" data-gsap="fade-right">
+          <div class="about-avatar-wrap">
+            <div class="about-avatar">
+              <div class="avatar-emoji">🧑‍💻</div>
+            </div>
+            <div class="about-glow"></div>
+            <!-- floating cards -->
+            <div class="float-chip chip-1">
+              <i class="bi bi-code-slash"></i> Clean Code
+            </div>
+            <div class="float-chip chip-2">
+              <i class="bi bi-lightning-charge"></i> Fast & Smooth
+            </div>
           </div>
         </div>
+
+        <div class="col-lg-7" data-gsap="fade-left">
+          <p class="section-eyebrow">About Me</p>
+          <h2 class="section-title">
+            A Designer who<br/>
+            <span class="text-accent">Judges a book<br/>by its cover</span>
+          </h2>
+          <p class="section-body mt-4">
+            I'm <strong>Ibrahim Memon</strong> — a self-taught UI/UX designer and Frontend Developer,
+            functioning in the industry for <strong>3+ years</strong>. Currently a Software Engineer at
+            <strong class="text-accent">Facebook</strong>, I make meaningful and delightful digital
+            products that create an equilibrium between user needs and business goals.
+          </p>
+          <p class="section-body">
+            Because if the cover doesn't impress you — what else can? I obsess over the details that
+            make digital experiences feel premium, smooth, and unforgettable.
+          </p>
+          <div class="about-tags d-flex flex-wrap gap-2 mt-4">
+            <span class="tag">UI Design</span>
+            <span class="tag">Frontend Dev</span>
+            <span class="tag">Motion Design</span>
+            <span class="tag">Accessibility</span>
+            <span class="tag">Design Systems</span>
+          </div>
+          <div class="d-flex gap-3 mt-4">
+            <a href="#contact" class="btn btn-primary-glow magnetic-btn">Get In Touch</a>
+            <a href="#" class="btn btn-ghost magnetic-btn">Download CV</a>
+          </div>
+        </div>
+
       </div>
     </div>
+  </section>
 
-    <!-- Project 2 -->
-    <div class="project-block reverse" data-aos="fade-up">
-      <div class="project-mockup" data-aos="fade-right" data-aos-delay="150">
-        <div class="mockup-inner">
-          <div class="mockup-browser-bar">
-            <div class="mockup-dot"></div>
-            <div class="mockup-dot"></div>
-            <div class="mockup-dot"></div>
+  <!-- ===================== SKILLS ===================== -->
+  <section id="skills" class="section-pad section-dark">
+    <div class="container-xl">
+      <div class="text-center mb-5" data-gsap="fade-up">
+        <p class="section-eyebrow">Tech Stack</p>
+        <h2 class="section-title">Tools I Work With</h2>
+        <p class="section-sub">Technologies and tools I use to build modern digital experiences.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+
+        <!-- Skill cards -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-gsap="fade-up" data-delay="0">
+          <div class="skill-card magnetic-btn">
+            <div class="skill-icon">
+              <i class="bi bi-filetype-html"></i>
+            </div>
+            <span class="skill-name">HTML5</span>
           </div>
-          <div class="mockup-content">
-            <div class="mockup-placeholder-img">📊</div>
-            <div class="mockup-line"></div>
-            <div class="mockup-line half"></div>
-            <div class="mockup-placeholder-text light" style="text-transform:uppercase;letter-spacing:0.1em">OPPORTUNITY (41px)</div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-gsap="fade-up" data-delay="0.05">
+          <div class="skill-card magnetic-btn">
+            <div class="skill-icon">
+              <i class="bi bi-filetype-css"></i>
+            </div>
+            <span class="skill-name">CSS3</span>
           </div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-gsap="fade-up" data-delay="0.1">
+          <div class="skill-card magnetic-btn">
+            <div class="skill-icon">
+              <i class="bi bi-filetype-js"></i>
+            </div>
+            <span class="skill-name">JavaScript</span>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-gsap="fade-up" data-delay="0.15">
+          <div class="skill-card magnetic-btn">
+            <div class="skill-icon" style="color:#7952b3">
+              <i class="bi bi-bootstrap"></i>
+            </div>
+            <span class="skill-name">Bootstrap 5</span>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-gsap="fade-up" data-delay="0.2">
+          <div class="skill-card magnetic-btn">
+            <div class="skill-icon" style="color:#38bdf8">
+              <i class="bi bi-wind"></i>
+            </div>
+            <span class="skill-name">Tailwind CSS</span>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-gsap="fade-up" data-delay="0.25">
+          <div class="skill-card magnetic-btn">
+            <div class="skill-icon" style="color:#61dafb">
+              <i class="bi bi-arrow-repeat"></i>
+            </div>
+            <span class="skill-name">React</span>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-gsap="fade-up" data-delay="0.3">
+          <div class="skill-card magnetic-btn">
+            <div class="skill-icon" style="color:#f05032">
+              <i class="bi bi-git"></i>
+            </div>
+            <span class="skill-name">Git & GitHub</span>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-gsap="fade-up" data-delay="0.35">
+          <div class="skill-card magnetic-btn">
+            <div class="skill-icon" style="color:#a855f7">
+              <i class="bi bi-vector-pen"></i>
+            </div>
+            <span class="skill-name">Figma</span>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-gsap="fade-up" data-delay="0.4">
+          <div class="skill-card magnetic-btn">
+            <div class="skill-icon" style="color:#ec4899">
+              <i class="bi bi-phone"></i>
+            </div>
+            <span class="skill-name">Responsive Design</span>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-gsap="fade-up" data-delay="0.45">
+          <div class="skill-card magnetic-btn">
+            <div class="skill-icon" style="color:#facc15">
+              <i class="bi bi-display"></i>
+            </div>
+            <span class="skill-name">GSAP</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section id="projects" class="section-pad">
+    <div class="container-xl">
+      <div class="text-center mb-5" data-gsap="fade-up">
+        <p class="section-eyebrow">Portfolio</p>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-sub">Handpicked projects showcasing design and development quality.</p>
+      </div>
+
+      <!-- Bento Grid -->
+      <div class="bento-grid" data-gsap="fade-up">
+
+        <!-- Card 1 — Large -->
+        <div class="bento-card bento-large project-card">
+          <div class="project-img-wrap">
+            <div class="project-img" style="background: linear-gradient(135deg,#1e1040 0%,#3b0764 100%)">
+              <div class="project-img-inner">
+                <div class="pimg-browser">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="pimg-content">
+                  <div class="pimg-bar w-75"></div>
+                  <div class="pimg-bar w-50 mt-2"></div>
+                  <div class="pimg-bar w-60 mt-2"></div>
+                  <div class="pimg-icon">🍽️</div>
+                </div>
+              </div>
+            </div>
+            <div class="project-overlay">
+              <div class="project-overlay-btns">
+                <a href="#" class="btn btn-sm btn-glass magnetic-btn">
+                  <i class="bi bi-github me-1"></i> GitHub
+                </a>
+                <a href="#" class="btn btn-sm btn-primary-glow magnetic-btn">
+                  <i class="bi bi-box-arrow-up-right me-1"></i> Live
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-label">Featured Project</span>
+            <h3 class="project-title-card">Restaurant App</h3>
+            <p class="project-desc">A full-featured restaurant web app with dynamic menus, personalized recommendations, and a seamless ordering experience.</p>
+            <div class="project-tags">
+              <span class="ptag">React</span>
+              <span class="ptag">CSS3</span>
+              <span class="ptag">Bootstrap</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 — Medium -->
+        <div class="bento-card bento-medium project-card">
+          <div class="project-img-wrap">
+            <div class="project-img" style="background: linear-gradient(135deg,#0a1628 0%,#1e3a5f 100%)">
+              <div class="project-img-inner">
+                <div class="pimg-browser">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="pimg-content">
+                  <div class="pimg-bar w-80"></div>
+                  <div class="pimg-bar w-60 mt-2"></div>
+                  <div class="pimg-icon">🏥</div>
+                </div>
+              </div>
+            </div>
+            <div class="project-overlay">
+              <div class="project-overlay-btns">
+                <a href="#" class="btn btn-sm btn-glass magnetic-btn"><i class="bi bi-github me-1"></i>GitHub</a>
+                <a href="#" class="btn btn-sm btn-primary-glow magnetic-btn"><i class="bi bi-box-arrow-up-right me-1"></i>Live</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-label">Featured Project</span>
+            <h3 class="project-title-card">Hospital Management</h3>
+            <p class="project-desc">A comprehensive hospital management system with patient records, scheduling and real-time dashboards.</p>
+            <div class="project-tags">
+              <span class="ptag">JavaScript</span>
+              <span class="ptag">Bootstrap 5</span>
+              <span class="ptag">Chart.js</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 — Medium -->
+        <div class="bento-card bento-medium project-card">
+          <div class="project-img-wrap">
+            <div class="project-img" style="background: linear-gradient(135deg,#0f1117 0%,#1a0f2e 100%)">
+              <div class="project-img-inner">
+                <div class="pimg-browser">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="pimg-content">
+                  <div class="pimg-bar w-70"></div>
+                  <div class="pimg-bar w-45 mt-2"></div>
+                  <div class="pimg-icon">🛒</div>
+                </div>
+              </div>
+            </div>
+            <div class="project-overlay">
+              <div class="project-overlay-btns">
+                <a href="#" class="btn btn-sm btn-glass magnetic-btn"><i class="bi bi-github me-1"></i>GitHub</a>
+                <a href="#" class="btn btn-sm btn-primary-glow magnetic-btn"><i class="bi bi-box-arrow-up-right me-1"></i>Live</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-label">Featured Project</span>
+            <h3 class="project-title-card">E-commerce UI</h3>
+            <p class="project-desc">Modern e-commerce frontend with product filtering, cart functionality, and smooth checkout flow.</p>
+            <div class="project-tags">
+              <span class="ptag">HTML5</span>
+              <span class="ptag">Tailwind</span>
+              <span class="ptag">JS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 — Small -->
+        <div class="bento-card bento-small project-card">
+          <div class="project-img-wrap">
+            <div class="project-img" style="background: linear-gradient(135deg,#0f172a 0%,#134e4a 100%)">
+              <div class="project-img-inner">
+                <div class="pimg-icon pimg-icon-lg">🎨</div>
+              </div>
+            </div>
+            <div class="project-overlay">
+              <div class="project-overlay-btns">
+                <a href="#" class="btn btn-sm btn-glass magnetic-btn"><i class="bi bi-github me-1"></i>GitHub</a>
+                <a href="#" class="btn btn-sm btn-primary-glow magnetic-btn"><i class="bi bi-box-arrow-up-right me-1"></i>Live</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title-card">Portfolio Template</h3>
+            <div class="project-tags">
+              <span class="ptag">CSS3</span>
+              <span class="ptag">GSAP</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section id="services" class="section-pad section-dark">
+    <div class="container-xl">
+      <div class="text-center mb-5" data-gsap="fade-up">
+        <p class="section-eyebrow">What I Offer</p>
+        <h2 class="section-title">Services</h2>
+        <p class="section-sub">Premium services tailored to bring your digital vision to life.</p>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-3" data-gsap="fade-up" data-delay="0">
+          <div class="service-card magnetic-btn">
+            <div class="service-icon"><i class="bi bi-layout-text-sidebar"></i></div>
+            <h4 class="service-title">Responsive Web Design</h4>
+            <p class="service-desc">Pixel-perfect, mobile-first websites that look stunning across every device and screen size.</p>
+            <div class="service-arrow"><i class="bi bi-arrow-up-right"></i></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3" data-gsap="fade-up" data-delay="0.08">
+          <div class="service-card magnetic-btn">
+            <div class="service-icon"><i class="bi bi-rocket-takeoff"></i></div>
+            <h4 class="service-title">Landing Page Design</h4>
+            <p class="service-desc">High-converting landing pages with smooth animations, strong CTAs and premium aesthetics.</p>
+            <div class="service-arrow"><i class="bi bi-arrow-up-right"></i></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3" data-gsap="fade-up" data-delay="0.16">
+          <div class="service-card magnetic-btn">
+            <div class="service-icon"><i class="bi bi-person-badge"></i></div>
+            <h4 class="service-title">Portfolio Websites</h4>
+            <p class="service-desc">Awwwards-inspired portfolio sites with cinematic animations that make you unforgettable.</p>
+            <div class="service-arrow"><i class="bi bi-arrow-up-right"></i></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3" data-gsap="fade-up" data-delay="0.24">
+          <div class="service-card magnetic-btn">
+            <div class="service-icon"><i class="bi bi-bag-heart"></i></div>
+            <h4 class="service-title">E-commerce Frontend</h4>
+            <p class="service-desc">Beautiful, fast product pages with modern UI patterns, filtering, and seamless cart UX.</p>
+            <div class="service-arrow"><i class="bi bi-arrow-up-right"></i></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EXPERIENCE TIMELINE ===================== -->
+  <section id="experience" class="section-pad">
+    <div class="container-xl">
+      <div class="text-center mb-5" data-gsap="fade-up">
+        <p class="section-eyebrow">Journey</p>
+        <h2 class="section-title">Work Experience</h2>
+        <p class="section-sub">My professional timeline and key milestones.</p>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item" data-gsap="fade-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-3">
+              <div>
+                <h4 class="tl-role">Software Engineer</h4>
+                <p class="tl-company"><i class="bi bi-circle-fill me-1" style="color:#1877f2;font-size:10px"></i>Facebook (Meta)</p>
+              </div>
+              <span class="tl-date">2023 — Present</span>
+            </div>
+            <p class="tl-desc">Building scalable, accessible frontend systems used by billions. Collaborating across cross-functional teams to create delightful user experiences at scale.</p>
+            <div class="tl-tags d-flex flex-wrap gap-2 mt-3">
+              <span class="tag">React</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">CSS Systems</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-gsap="fade-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-3">
+              <div>
+                <h4 class="tl-role">UI/UX Designer</h4>
+                <p class="tl-company"><i class="bi bi-circle-fill me-1" style="color:#a855f7;font-size:10px"></i>Freelance</p>
+              </div>
+              <span class="tl-date">2021 — 2023</span>
+            </div>
+            <p class="tl-desc">Designed and built 20+ client projects ranging from landing pages and portfolios to full e-commerce frontends, with a focus on motion and accessibility.</p>
+            <div class="tl-tags d-flex flex-wrap gap-2 mt-3">
+              <span class="tag">Figma</span>
+              <span class="tag">HTML/CSS</span>
+              <span class="tag">Bootstrap</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-gsap="fade-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-3">
+              <div>
+                <h4 class="tl-role">Self-taught Journey Begins</h4>
+                <p class="tl-company"><i class="bi bi-circle-fill me-1" style="color:#10b981;font-size:10px"></i>Personal</p>
+              </div>
+              <span class="tl-date">2020 — 2021</span>
+            </div>
+            <p class="tl-desc">Discovered a passion for web development and design. Completed hundreds of hours of learning HTML, CSS, JavaScript, and UI fundamentals through self-study.</p>
+            <div class="tl-tags d-flex flex-wrap gap-2 mt-3">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section id="testimonials" class="section-pad section-dark">
+    <div class="container-xl">
+      <div class="text-center mb-5" data-gsap="fade-up">
+        <p class="section-eyebrow">Social Proof</p>
+        <h2 class="section-title">What Clients Say</h2>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4" data-gsap="fade-up" data-delay="0">
+          <div class="testimonial-card glass-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"Ibrahim delivered an absolutely stunning portfolio site. The animations are silky smooth and the design feels genuinely premium. Exceeded every expectation."</p>
+            <div class="testi-author d-flex align-items-center gap-3 mt-4">
+              <div class="testi-avatar">A</div>
+              <div>
+                <p class="testi-name">Ahmed Al-Rashid</p>
+                <p class="testi-role">CEO, DigitalCraft</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-gsap="fade-up" data-delay="0.1">
+          <div class="testimonial-card glass-card featured-testi">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"The landing page Ibrahim built converted 3x better than our old one. Clean design, fast load time, and perfectly responsive. Truly a top-tier developer."</p>
+            <div class="testi-author d-flex align-items-center gap-3 mt-4">
+              <div class="testi-avatar">S</div>
+              <div>
+                <p class="testi-name">Sarah Mitchell</p>
+                <p class="testi-role">Founder, LaunchFast</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 offset-md-3 offset-lg-0" data-gsap="fade-up" data-delay="0.2">
+          <div class="testimonial-card glass-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"Working with Ibrahim was seamless. He understood our vision immediately and delivered a beautiful e-commerce UI that our customers absolutely love."</p>
+            <div class="testi-author d-flex align-items-center gap-3 mt-4">
+              <div class="testi-avatar">K</div>
+              <div>
+                <p class="testi-name">Karim Hassan</p>
+                <p class="testi-role">Product Lead, ShopNow</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact" class="section-pad contact-section">
+    <div class="contact-blob"></div>
+    <div class="container-xl">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center" data-gsap="fade-up">
+          <p class="section-eyebrow">Get In Touch</p>
+          <h2 class="section-title">Let's Work Together</h2>
+          <p class="section-sub mb-5">
+            I'm currently looking to join a cross-functional team that values improving people's lives
+            through accessible design — or have a project in mind? Let's connect.
+          </p>
         </div>
       </div>
-      <div>
-        <div class="project-label">Featured Project</div>
-        <h3 class="project-title">Hospital Management</h3>
-        <div class="project-desc">
-          A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.
+
+      <div class="row g-4 justify-content-center">
+        <!-- Contact info -->
+        <div class="col-lg-5" data-gsap="fade-right">
+          <div class="contact-info glass-card h-100">
+            <h4 class="mb-4">Contact Information</h4>
+
+            <a href="mailto:hamemapple2018@gmail.com" class="contact-item">
+              <div class="contact-icon"><i class="bi bi-envelope"></i></div>
+              <div>
+                <p class="ci-label">Email</p>
+                <p class="ci-value">hamemapple2018@gmail.com</p>
+              </div>
+            </a>
+
+            <a href="#" class="contact-item">
+              <div class="contact-icon"><i class="bi bi-geo-alt"></i></div>
+              <div>
+                <p class="ci-label">Location</p>
+                <p class="ci-value">Chittagong, Bangladesh</p>
+              </div>
+            </a>
+
+            <a href="#" class="contact-item">
+              <div class="contact-icon"><i class="bi bi-briefcase"></i></div>
+              <div>
+                <p class="ci-label">Status</p>
+                <p class="ci-value" style="color:#4ade80">Available for freelance</p>
+              </div>
+            </a>
+
+            <div class="contact-socials d-flex gap-3 mt-4">
+              <a href="https://www.instagram.com/mr_hamem" target="_blank" class="social-link magnetic-btn" title="Instagram">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="#" class="social-link magnetic-btn" title="GitHub">
+                <i class="bi bi-github"></i>
+              </a>
+              <a href="#" class="social-link magnetic-btn" title="LinkedIn">
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <a href="#" class="social-link magnetic-btn" title="Dribbble">
+                <i class="bi bi-dribbble"></i>
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="project-links">
-          <a href="#" class="project-link">⭐</a>
-          <a href="#" class="project-link">🔗</a>
+
+        <!-- Contact form -->
+        <div class="col-lg-7" data-gsap="fade-left">
+          <div class="contact-form glass-card">
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="form-group-custom">
+                  <input type="text" class="form-input-custom" id="fname" placeholder=" " />
+                  <label class="form-label-custom" for="fname">First Name</label>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group-custom">
+                  <input type="text" class="form-input-custom" id="lname" placeholder=" " />
+                  <label class="form-label-custom" for="lname">Last Name</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group-custom">
+                  <input type="email" class="form-input-custom" id="email" placeholder=" " />
+                  <label class="form-label-custom" for="email">Email Address</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group-custom">
+                  <input type="text" class="form-input-custom" id="subject" placeholder=" " />
+                  <label class="form-label-custom" for="subject">Subject</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group-custom">
+                  <textarea class="form-input-custom form-textarea" id="message" placeholder=" " rows="5"></textarea>
+                  <label class="form-label-custom" for="message">Your Message</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="button" class="btn btn-primary-glow w-100 magnetic-btn" id="sendBtn">
+                  Send Message <i class="bi bi-send ms-2"></i>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="divider"></div>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="contact-inner">
-      <div class="section-label">Get In Touch</div>
-      <h2 class="section-title" data-aos="fade-up">Contact</h2>
-      <p class="contact-desc" data-aos="fade-up" data-aos-delay="80">
-        I'm currently looking to join a cross-functional team that values improving people's lives through accessible design, or have a project in mind? Let's connect.
-      </p>
-      <div class="contact-email" data-aos="fade-up" data-aos-delay="160">
-        hamemapple2018@gmail.com
-      </div>
-      <div class="contact-socials" data-aos="fade-up" data-aos-delay="240">
-        <a href="https://www.instagram.com/mr_hamem" class="social-btn" title="Instagram">📷</a>
-        <a href="#" class="social-btn" title="Dribbble">🏀</a>
-        <a href="#" class="social-btn" title="Google">🔍</a>
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="footer-glow"></div>
+    <div class="container-xl">
+      <div class="row align-items-center py-4">
+        <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+          <a href="#hero" class="footer-logo">MH</a>
+        </div>
+        <div class="col-md-4 text-center mb-3 mb-md-0">
+          <div class="footer-links d-flex justify-content-center gap-4">
+            <a href="#about">About</a>
+            <a href="#projects">Work</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+        <div class="col-md-4 text-center text-md-end">
+          <p class="footer-copy">Designed &amp; Built by <span class="text-accent">Ibrahim Memon</span> © 2026</p>
+        </div>
       </div>
     </div>
-  </section>
- </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <span>Designed &amp; Built by MR HAMEM</span>
-    <span>© 2026</span>
   </footer>
-  <!-- AOS Library -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-  AOS.init();
-</script>
+
+  <!-- Back to top -->
+  <button id="backToTop" class="back-to-top magnetic-btn" title="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <!-- Custom JS -->
+  <script src="./assets/js/script.js"></script>
 </body>
 </html>
